@@ -1,0 +1,62 @@
+.rightCardCont {
+    padding-inline: 12px;
+    background-color: pink;
+    color: black;
+    border-radius: 0px 12px 12px 0px;
+}
+
+.cardPara {
+    color: gray;
+    padding-block: 10px;
+    text-align: center;
+}
+
+.cardInp {
+    padding: 13px;
+    border: none;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.cardBtn {
+    background-color: #CD4631;
+    padding: 13px;
+    border-radius: 0px 12px 12px 0px;
+    border: none;
+    color: white;
+}
+.girlImage {
+  height: 11rem;
+  
+  padding-inline: 6rem;
+}
+
+.postImg {
+  height: 3rem;
+  border-radius: 6px;
+}
+
+.cardLeftImg {
+  height: 26rem;
+  border-radius: 10px 0 0 10px;
+  display: "flex";
+}
+
+.postCardCont {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-inline: 10px;
+}
+
+.postcardList {
+    display: flex;
+    padding-block: 1rem;
+    align-content: center;
+}
+
+.postdetail {
+    display: flex;
+    gap: 10px;
+    margin-top: 7px;
+    color: gray;
+}

@@ -1,0 +1,85 @@
+
+.carousel-title {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 1.5rem;
+ 
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  flex: 1;
+  height: 9rem;
+  width: 9rem;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-slide {
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: space-around;
+  padding: 0 10px;
+  gap: 1rem;
+}
+
+.carousel-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(to bottom, #cd4631, #9c3e62);
+  border-radius: 0.6rem;
+  font-family: "monospace", sans-serif;
+  font-size: 1rem;
+  min-width: 0;
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.carousel-card:hover {
+  transform: translateY(-5px);
+}
+
+.carousel-button {
+  background: rgba(0, 0, 0, 0.9);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+  transform: scale(1.3);
+}
+
+.carousel-controls {
+  display: flex;
+  background-color: #c84e32;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}

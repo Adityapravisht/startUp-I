@@ -1,0 +1,31 @@
+
+@use "../abstracts/mixins" as *;
+
+.login_background_image {
+    // background-image($img-path, $width, $padding-inline, $padding-block, $height)
+
+  @include background-image("./loginImage.png",50%,null,null,100vh);
+
+}
+.carousel-container{
+    @include background-image("./crouselbackImage.jpg",100%,2rem,2rem,fit-content);
+}
+.imageSliderBImage{
+    @include background-image("./imageSliderbackImage.png",100%,null,null,null);
+    background-color: black;
+}
+.commentCrouselCont{
+    @include background-image("./commentBackImage.jpg",100%,null,1rem,null);
+}
+// .bgSunImage{
+//     @include background-image("./MysunIcon.png",null,null,null,5rem);
+// }
+/* Variant: full-width hero banner */
+// .hero-banner {
+//   @include background-image("hero-bg.jpg", 100%, 0, 60vh);
+// }
+
+/* Variant: small card background */
+// .card-bg {
+//   @include background-image("card-bg.png", 30%, 1rem, 200px);
+// }

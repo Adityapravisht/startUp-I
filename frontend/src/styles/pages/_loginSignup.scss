@@ -1,0 +1,117 @@
+.upper_content {
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.MyLoginPage {
+  display: flex;
+  height: 100vh;
+}
+/////////////////////////
+.sideImage {
+  height: 13rem;
+  margin: 0 -5%;
+  z-index: 10;
+}
+
+/////////////////////////////////
+
+.imageHeading {
+  gap: 0.5rem;
+}
+
+.imageContainer {
+  padding: 2rem;
+}
+
+.frontImage {
+  height: 15rem;
+  z-index: 2;
+  position: relative;
+  object-fit: contain;
+}
+
+.sideImage {
+  height: 13rem;
+  margin: 0 -5%;
+}
+
+.loginPageMessage {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.formSection {
+  width: 50%;
+  padding: 1rem;
+}
+
+.formField {
+  display: flex;
+  margin: 2rem;
+  padding: 3%;
+  gap: 20px;
+  border: none;
+  border-bottom: 1px solid gainsboro;
+}
+
+.icon_Style {
+  color: gray;
+}
+
+.heading {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: x-large;
+  font-weight: 600;
+  margin-bottom: 21px;
+  width: 40%;
+  text-align: start;
+}
+
+.formInputs {
+  font-size: medium;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+}
+
+.formInputs::placeholder {
+  color: gray;
+}
+
+.forgetLink {
+  padding: 2.3rem;
+  color: blue;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.loginButton {
+  padding: 14px;
+  background-color: #eb0927;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-size: medium;
+  width: 80%;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.loginButton:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.error-message {
+  color: #eb0927;
+  font-size: 0.8rem;
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}

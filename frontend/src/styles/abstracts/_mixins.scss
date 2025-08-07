@@ -1,0 +1,34 @@
+
+
+@mixin background-image($img-path, $width: 50%, $padding-inline: 5rem, $padding-block: 5rem, $height: 100vh) {
+    background-image: url(#{$img-path});
+    width: $width;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: $height;
+    padding-inline: $padding-inline;
+    padding-block: $padding-block;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.flex-center {
+    @include flex-center;
+}
+
+.flex-column {
+    @include flex-column;
+}
