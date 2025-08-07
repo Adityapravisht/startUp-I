@@ -41,8 +41,9 @@ const Myvideo = ({ options, onReady }) => {
   }, [options, onReady]);
 
   return (
-    <div data-vjs-palyer>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+    <div >
+
+      {/* <div style={{ display: "flex", justifyContent: "center" }}>
         <video
           src="https://ik.imagekit.io/dq2gfoxqk/sample-video.mp4"
           // src="./3789373725-preview.mp4"
@@ -52,14 +53,14 @@ const Myvideo = ({ options, onReady }) => {
           loop
           poster="https://ik.imagekit.io/dq2gfoxqk/sample-video.mp4/ik-thumbnail.jpg?tr=so-4"
         />
-      </div>
+      </div> */}
       {/* ////////////////////////////////////////////////// */}
 
 
-      {/* <div data-vjs-player>
+      <div data-vjs-player >
         <div ref={videoRef} />
       </div>
-      <div ref={videoRef}/> */}
+      <div ref={videoRef}/>
     </div>
   );
 };
