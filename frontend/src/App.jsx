@@ -5,49 +5,58 @@ import { GlobalStyle } from "./theme/GlobalStyle";
 import useThemeStore from "./store/themeStore";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./app.scss";
-import Routes from "./utils/Routes";  
+import Routes from "./utils/Routes";
 import { useRef } from "react";
 import Myvideo from "./media/Myvideo";
 
-
 function App() {
   const darkMode = useThemeStore((state) => state.darkMode);
-  
+
   const router = createBrowserRouter(Routes);
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyle />
       <RouterProvider router={router} />
-      <ToastContainer position="top-center" />
+      <ToastContainer position="top-center"/>
     </ThemeProvider>
   );
 }
 
 export default App;
 
+////////////////////////////////////////
+
 // const App = () => {
 //   const playerRef = useRef(null);
 
-//     const videoJsOptions = {
-//     autoplay: true,
+//   const videoJsOptions = {
+//     // autoplay: true,
 //     controls: true,
 //     responsive: true,
+//     playbackRates: [0.25, 0.5, 1, 1.5, 2],
 //     fluid: true,
-//     sources: [{
-//       src: "https://ik.imagekit.io/dq2gfoxqk/sample-video.mp4/ik-master.m3u8?tr=sr-240_360_480_720_1080",
-//       type: "application/x-mpegURL",
-//     },],
-//     // sources:[{
-//     //   src:"https://ik.imagekit.io/dq2gfoxqk/sample-video.mp4",
-//     //   type:"video/mp4",
-//     // }]
+//     muted: true,
+//     sources: [
+//       {
+//         src: "https://ik.imagekit.io/dzf6n12qm/sample-video.mp4/ik-master.m3u8?tr=sr-240_360_480_720_1080",
+//         type: "application/x-mpegURL",
+//       },
+//     ],
+//     poster:
+//       "https://ik.imagekit.io/dq2gfoxqk/sample-video.mp4/ik-thumbnail.jpg?tr=so-4",
+//     // sources: [
+//     //   {
+//     //     // src:"https://ik.imagekit.io/dzf6n12qm/sample-video.mp4?updatedAt=1754545471553",
+//     //     src: "./3789373725-preview.mp4",
+//     //     type: "video/mp4",
+//     //   },
+//     // ],
 //   };
 
 //   const handlePlayerReady = (player) => {
 //     playerRef.current = player;
 
-//     // You can handle player events here, for example:
 //     player.on("waiting", () => {
 //       console.log("player is waiting");
 //     });
@@ -58,7 +67,7 @@ export default App;
 //   };
 
 //   return (
-//     <div style={{width:'800px'}}>
+//     <div>
 //       <Myvideo options={videoJsOptions} onReady={handlePlayerReady} />
 //     </div>
 //   );

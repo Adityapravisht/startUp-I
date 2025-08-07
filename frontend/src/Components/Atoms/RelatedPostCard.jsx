@@ -15,10 +15,9 @@ const RelatedPostCard = () => {
 
   return (
     <div
-      
       className="roboto-regular postCardCont"
     >
-      <h1 style={{ fontSize: "1.5rem" }} className="roboto-medium">Related posts</h1>
+      <h1 style={{ fontSize: "1.5rem" }} className="roboto-bold">Related posts</h1>
       {postData.map((data, idx) => (
         <div
           

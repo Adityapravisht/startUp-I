@@ -15,8 +15,7 @@ const InputCard = () => {
 
       {/* right card */}
       <div
-       
-        className="roboto-medium rightCardCont"
+        className="roboto-regular rightCardCont"
       >
         <div>
           <MyImage
@@ -26,7 +25,7 @@ const InputCard = () => {
           />
         </div>
         <div style={{}}>
-          <h1 style={{ textAlign: "center", marginBlock: "0.6rem" }} >
+          <h1 className="parahead roboto-medium">
             Enjoyed the read?
           </h1>
           <p

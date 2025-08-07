@@ -24,13 +24,11 @@ const SignupPage = () => {
     setLoginError("");
 
     try {
-      // Replace with your actual API endpoint
       const response = await axios.post(
         "http://localhost:8000/client/signup",
         data
       );
 
-      // Store JWT token and user data
       localStorage.setItem("authToken", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user));
 

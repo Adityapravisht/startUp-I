@@ -17,15 +17,4 @@
 .commentCrouselCont{
     @include background-image("./commentBackImage.jpg",100%,null,1rem,null);
 }
-// .bgSunImage{
-//     @include background-image("./MysunIcon.png",null,null,null,5rem);
-// }
-/* Variant: full-width hero banner */
-// .hero-banner {
-//   @include background-image("hero-bg.jpg", 100%, 0, 60vh);
-// }
 
-/* Variant: small card background */
-// .card-bg {
-//   @include background-image("card-bg.png", 30%, 1rem, 200px);
-// }

@@ -24,21 +24,27 @@
     border: none;
     color: white;
 }
+
 .girlImage {
-  height: 11rem;
-  
-  padding-inline: 6rem;
+    height: 11rem;
+
+    padding-inline: 6rem;
+}
+
+.parahead {
+    text-align: center;
+    margin-block: 0.6rem;
 }
 
 .postImg {
-  height: 3rem;
-  border-radius: 6px;
+    height: 3rem;
+    border-radius: 6px;
 }
 
 .cardLeftImg {
-  height: 26rem;
-  border-radius: 10px 0 0 10px;
-  display: "flex";
+    height: 26rem;
+    border-radius: 10px 0 0 10px;
+    display: "flex";
 }
 
 .postCardCont {
