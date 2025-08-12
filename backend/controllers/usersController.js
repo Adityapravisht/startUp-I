@@ -31,27 +31,37 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
+
     if (!email || !password) {
-      return res.status(400).json("All fields are required");
+      return res.status(400).json({ message: "All fields are required" });
     }
     if (password.length < 6) {
-      return res.json({ message: "password must contain more then 6 letter" });
+      return res
+        .status(400)
+        .json({ message: "Password must be at least 6 characters" });
     }
-    console.log("Login request:", req.body);
 
     const user = await clientServices.authenticateUser(email, password);
-    console.log("User authenticated:", user);
+    if (!user) {
+      return res.status(401).json({ message: "Invalid email or password" });
+    }
 
-    const token = jwt.sign(
-      { id: user.id, email: user.email },
-      process.env.JWT_SECRET,
-      { expiresIn: "1h" }
-    );
+    const payload = { id: user.id, email: user.email };
 
-    res.status(200).json({ token, user });
+    jwt.sign(payload, process.env.JWT_SECRET, {}, (err, token) => {
+      if (err) throw err;
+      // const { password, ...userWithoutPassword } = user._doc;
+      return res
+        .cookie("token", token, {
+          httpOnly: true,
+          secure: false, 
+          sameSite: "lax",
+          path: "/", 
+        }).json({ message: "user logged in" });
+    });
   } catch (error) {
-    console.error("Login error:", error.message);
-    res.status(401).json({ message: error.message });
+    console.error("Login error:", error);
+    res.status(500).json({ message: "Internal server error" });
   }
 };
 

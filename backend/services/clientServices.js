@@ -26,10 +26,10 @@ export const authenticateUser = async (email, password) => {
     throw new Error("User not found");
   }
 
-  console.log(rows);
+  // console.log(rows);
 
   const user = rows[0];
-  console.log("Stored password hash:", user.password, password);
+  // console.log("Stored password hash:", user.password, password);
 
   const isValid = bcrypt.compareSync(password, user.password);
   console.log("Password match:", isValid);

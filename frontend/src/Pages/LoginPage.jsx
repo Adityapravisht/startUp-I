@@ -27,7 +27,8 @@ const LoginPage = () => {
       // Replace with your actual API endpoint
       const response = await axios.post(
         "http://localhost:8000/client/login",
-        data
+        data,
+        { withCredentials: true }
       );
 
       // Store JWT token and user data
@@ -35,7 +36,7 @@ const LoginPage = () => {
       localStorage.setItem("user", JSON.stringify(response.data.user));
       toast.success("Logged in ");
 
-      // navigate("/dashboard");
+      navigate("/");
     } catch (error) {
       console.error("Login error:", error);
       setLoginError(
@@ -150,8 +151,9 @@ const LoginPage = () => {
           {/* Display login error */}
           {loginError && <p className="error-message">{loginError}</p>}
 
-          <div style={{display:'flex', width:'100%', justifyContent:'center'}}>
-            
+          <div
+            style={{ display: "flex", width: "100%", justifyContent: "center" }}
+          >
             <MyButton
               type={"submit"}
               className={`loginButton `}
@@ -163,8 +165,6 @@ const LoginPage = () => {
       </div>
     </div>
   );
-
- 
 };
 
 export default LoginPage;
