@@ -6,7 +6,7 @@ const StyledInput = styled.input`
  color:${({theme}) => theme.textPrimary}
 `;
 
-const MyInputs = ({
+const MyInput = ({
   type,
   className,
   placeholder,
@@ -52,7 +52,7 @@ const MyInputs = ({
   );
 };
 
-MyInputs.propTypes = {
+MyInput.propTypes = {
   type: PropTypes.string,
   className: PropTypes.string,
   placeholder: PropTypes.string,
@@ -70,7 +70,7 @@ MyInputs.propTypes = {
   }),
 };
 
-MyInputs.defaultProps = {
+MyInput.defaultProps = {
   type: "text",
   className: "",
   placeholder: "",
@@ -80,4 +80,4 @@ MyInputs.defaultProps = {
   pattern: null,
 };
 
-export default MyInputs;
+export default MyInput;

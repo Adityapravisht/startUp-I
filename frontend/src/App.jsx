@@ -6,9 +6,8 @@ import useThemeStore from "./store/themeStore";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./app.scss";
 import Routes from "./utils/Routes";
-import { useRef } from "react";
 import Myvideo from "./media/Myvideo";
-import Upload from "./Components/Atoms/Upload";
+import Upload from "./components/atoms/Upload";
 
 function App() {
   const darkMode = useThemeStore((state) => state.darkMode);

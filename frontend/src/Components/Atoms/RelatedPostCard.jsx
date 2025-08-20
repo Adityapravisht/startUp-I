@@ -20,7 +20,7 @@ const RelatedPostCard = () => {
       <h1 style={{ fontSize: "1.5rem" }} className="roboto-bold">Related posts</h1>
       {postData.map((data, idx) => (
         <div
-          
+
           className="postcardList"
           key={idx}
         >
@@ -31,10 +31,10 @@ const RelatedPostCard = () => {
               className="postImg"
             />
           </div>
-          <div style={{ paddingTop: "10px" }}>
+          <div className="postHead">
             <p>{data.postHead}</p>
             <div
-             
+
               className="postdetail"
             >
               <p>{data.postName}</p>

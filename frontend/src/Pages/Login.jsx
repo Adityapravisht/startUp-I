@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import axios, { all } from "axios";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../index.css";
 import { toast } from "react-toastify";
-import MyImage from "../Components/Atoms/MyImage";
-import MyButton from "../Components/Atoms/MyButton";
-import MyInput from "../Components/Atoms/MyInput";
+import MyImage from "../components/atoms/MyImage";
+import MyButton from "../components/atoms/MyButton";
+import MyInput from "../components/atoms/MyInput";
 
-const LoginPage = () => {
+
+const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [loginError, setLoginError] = useState("");
   const navigate = useNavigate();
@@ -167,4 +168,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Login;

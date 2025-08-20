@@ -1,5 +1,5 @@
 // import React from "react";
-import MyImage from "../Atoms/MyImage";
+import MyImage from "../atoms/MyImage";
 import { MdLocationPin } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
@@ -23,18 +23,16 @@ const socialImg = [
   },
 ];
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footerImage">
+      {/* <div className="footerImage">
         <MyImage src={"./archsImage.png"} />
 
-        <MyImage src={"./archsImage.png"} />
-      </div>
+        <MyImage src={"./archsImage.png"} className="revimage"/>
+      </div> */}
 
       <div className="footer-content">
-        {/* Left column: Logo, description, social icons */}
-
         <div className="footer-left">
           <MyImage src={"StartUp&I.png"} className="footerStrartUpImg" />
 
@@ -54,32 +52,32 @@ function Footer() {
 
         {/* Middle column: Quick Links */}
         <div className="footer-middle">
-          <h4>Quick Links</h4>
+          <p>Quick Links</p>
           <ul className="links">
             <li>
-              <a href="#">Home</a>
+              <a href=".">Home</a>
             </li>
             <li>
-              <a href="#">About Us</a>
+              <a href="/about">About Us</a>
             </li>
             <li>
-              <a href="#">Tech Partner</a>
+              <a href="/tech-partner">Tech Partner</a>
             </li>
             <li>
-              <a href="#">Subscribe</a>
+              <a href="/subscribe">Subscribe</a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="/contact">Contact Us</a>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="/blog">Blog</a>
             </li>
           </ul>
         </div>
 
         {/* Right column: Contact information */}
         <div className="footer-right">
-          <h4>Contact Us</h4>
+          <p >Contact Us</p>
           <ul>
             <li className="contact-info">
               <MdLocationPin />

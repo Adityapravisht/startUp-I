@@ -1,6 +1,6 @@
 import React from 'react'
-import RelatedPostCard from '../Atoms/RelatedPostCard'
-import InputCard from '../Atoms/InputCard'
+import RelatedPostCard from '../atoms/RelatedPostCard'
+import InputCard from '../atoms/InputCard'
 
 const BothCards = () => {
   return (
@@ -11,4 +11,6 @@ const BothCards = () => {
   )
 }
 
-export default BothCards
+export default BothCards;
+
+//

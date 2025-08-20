@@ -1,26 +1,20 @@
-import React from "react";
-import Navbar from "../Components/Layout/Navbar";
-import Footer from "../Components/Layout/Footer";
-import MyNewCarousel from "../Components/Functionalities/MyCrousel";
-import BothCards from "../Components/Layout/bothCards";
-import CommentCarousel from "../Components/Functionalities/CommentCrousel";
-import ImageSlider from "../Components/Functionalities/ImageSlider";
-import Upload from "../Components/Atoms/Upload";
-import BookViewer from "../Components/Functionalities/BookViewer";
+import MyNewCarousel from "../components/functionalities/MyCrousel";
+import BothCards from "../components/layout/bothCards";
+import CommentCarousel from "../components/functionalities/CommentCrousel";
+import ImageSlider from "../components/functionalities/ImageSlider";
+import BookViewer from "../components/functionalities/BookViewer";
+import { FooterBg } from "../components/navigation/FooterBg";
 
 const Home = () => {
   return (
-    <div style={{ height: "100vh", position: "relative" }}>
-      <Navbar />
-      {/* <CommentCarousel />
+    <div>
+      <CommentCarousel />
       <BothCards />
       <MyNewCarousel />
-      <ImageSlider /> */}
-      <Upload/>
-      {/* <BookViewer/> */}
-      <div style={{ marginTop: "10rem" }}>
-        <Footer />
-      </div>
+      <ImageSlider />
+      <BookViewer />
+
+      <FooterBg />
     </div>
   );
 };

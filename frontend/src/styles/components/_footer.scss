@@ -2,11 +2,36 @@
 .footer {
   color: #ffffff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  // background-image: url(../../../public/subscribe-bg.png);
 }
 
 .footerImage {
   display: flex;
+  width: 100%;
   justify-content: space-between;
+  align-items: center;
+}
+
+.footerImage img {
+  width: 40%;
+}
+
+.revimage {
+  transform: scaleX(-1);
+}
+
+@media (max-width: 768px) {
+  .footerImage {
+    justify-content: center;
+  }
+
+  .footerImage img {
+    width: 100%;
+  }
+
+  .revimage {
+    display: none;
+  }
 }
 
 .footer-content {
@@ -45,11 +70,13 @@
   border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.footer-middle h4 {
+.footer-middle p {
   font-size: 16px;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ffffff;
+  font-weight: bold;
+
+  // margin-bottom: 10px;
+  // padding-bottom: 5px;
+  // border-bottom: 1px solid #ffffff;
 }
 .footer-middle .links {
   list-style: none;
@@ -69,15 +96,15 @@
   flex: 1;
   padding-inline: 20px;
   padding-bottom: 2rem;
-
   border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
-.footer-right h4 {
+.footer-right p {
   font-size: 16px;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  display: inline-block;
-  border-bottom: 1px solid #ffffff;
+  font-weight: bold;
+  // margin-bottom: 10px;
+  // padding-bottom: 5px;
+  // display: inline-block;
+  // border-bottom: 1px solid #ffffff;
 }
 .footer-right .contact-info {
   list-style: none;
@@ -87,9 +114,11 @@
 
 .contact-info{
   border-bottom: 1px solid #afa5a5;
+width: fit-content;
   display: flex;
   align-items: center;
   gap: 0.7rem;
+font-size: 15px;
 }
 
 

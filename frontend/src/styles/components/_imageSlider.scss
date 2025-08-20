@@ -58,3 +58,135 @@
     justify-content: center;
     width: 100%;
 }
+
+
+// nksfkfkfkjhfhfkjfkjf
+// .imageSliderBImage {
+//   background: linear-gradient(180deg, #0a0a0a, #1a1a1a); // same as navbar/footer
+//   color: white;
+//   padding: 2rem 0;
+//   font-family: monospace;
+// }
+
+// // --- Header ---
+// .latest_head {
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 1rem 2rem;
+//   align-items: center;
+
+//   img {
+//     height: 3rem;
+//     object-fit: contain;
+//   }
+// }
+
+// .latestAction {
+//   background-color: transparent;
+//   color: white;
+//   padding: 0.8rem 1.2rem;
+//   border-radius: 1.3rem;
+//   border: 1px solid white;
+//   font-weight: bold;
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+
+//   &:hover {
+//     background-color: white;
+//     color: black;
+//   }
+// }
+
+// // --- Carousel Container ---
+// .latest_cont {
+//   display: flex;
+//   height: 350px;
+//   padding: 2rem;
+//   position: relative;
+//   align-items: center;
+//   justify-content: center;
+//   overflow: hidden;
+// }
+
+// // --- Buttons ---
+// .latestActionBtn {
+//   color: black;
+//   background-color: white;
+//   border-radius: 50%;
+//   padding: 0.6rem;
+//   border: none;
+//   font-size: 1.3rem;
+//   cursor: pointer;
+//   transition: transform 0.2s ease-out;
+
+//   &:hover {
+//     transform: scale(1.1);
+//   }
+// }
+
+// .latestBtnHead {
+//   position: absolute;
+//   left: 2rem;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+// .latestRightBtnHead {
+//   position: absolute;
+//   right: 2rem;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+// // --- Images ---
+// .imageListCont {
+//   display: flex;
+//   justify-content: center;
+//   width: 100%;
+//   position: relative;
+// }
+
+// .imageList {
+//   position: absolute;
+//   height: 15rem;
+//   object-fit: contain;
+// }
+
+// // --- Responsive ---
+// @media (max-width: 1024px) {
+//   .imageList {
+//     height: 12rem;
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .latest_cont {
+//     height: 280px;
+//     padding: 1rem;
+//   }
+
+//   .imageList {
+//     height: 10rem;
+//   }
+
+//   .latestActionBtn {
+//     font-size: 1rem;
+//     padding: 0.5rem;
+//   }
+// }
+
+// @media (max-width: 480px) {
+//   .latest_cont {
+//     height: 220px;
+//   }
+
+//   .imageList {
+//     height: 8rem;
+//   }
+
+//   .latestAction {
+//     padding: 0.6rem 1rem;
+//     font-size: 0.9rem;
+//   }
+// }
+

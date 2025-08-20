@@ -1,91 +1,111 @@
 @use '../abstracts/mixins' as *;
 
-.comment-carousel-wrapper {
-    margin: 1rem auto;
-    max-width: 1200px;
+.commentCrouselCont {
+  width: 100%;
+  background-color: #c84e32; 
+  padding: 3rem 1rem;
 }
 
-.comment-viewport {
-    overflow: hidden;
-    flex: 1;
-    height: 300px;
-}
-
-.comment-track {
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
-.bgSunImage {
-    @include background-image('./MysunIcon.png', 2rem, 2rem, null, 5rem);
-}
-
-.comment-slide {
-    display: flex;
-    flex: 0 0 100%;
-    justify-content: space-around;
-    padding: 0 10px;
-    gap: 1rem;
-}
-
-.comment-card {
-    background-color: var(--bg-light);
-    color: var(--text-primary);
-    z-index: 10;
-    padding: 1rem;
-    max-width: 500px;
-    min-width: 300px;
-    /* height: 7rem; */
-    border-radius: 0.7rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.comment-text {
-    text-align: left;
-    line-height: 27px;
-    margin-block: 1rem;
-    flex-grow: 1;
-    font-family: monospace;
-    font-weight: bold;
-    font-size: medium;
-}
-
-.comment-footer {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin-top: 1.5rem;
-}
-
-.carousel-button {
-    background: rgba(0, 0, 0, 0.3);
-    border: none;
-    color: white;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    border: 1px solid white;
-    margin-inline: 10px;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
 }
 
 .Comment_heading {
-    // padding-left: 20px;
-    padding-top: 20px;
-    color: white;
-    display: flex;
-    align-content: center;
-    gap: 10px;
-    width: 90rem;
-    // font-size: 20px;
-    // background-color: #fff;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
 }
 
-// .actionButton{
-    
-// }
+.comment-carousel-wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.comment-viewport {
+  overflow: hidden;
+  flex: 1;
+  height: auto;
+}
+
+.comment-track {
+  display: flex;
+  width: 100%;
+}
+
+.comment-slide {
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.comment-card {
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  border-radius: 0.7rem;
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+
+  max-width: 350px;
+  min-width: 250px;
+
+  @media (min-width: 1024px) {
+    flex: 0 0 calc(33.333% - 1rem);
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    flex: 0 0 calc(50% - 1rem);
+  }
+  @media (max-width: 767px) {
+    flex: 0 0 100%;
+  }
+}
+
+.comment-text {
+  text-align: left;
+  line-height: 1.6;
+  margin-block: 1rem;
+  flex-grow: 1;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.comment-footer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.carousel-button {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-inline: 10px;
+  padding: 0.5rem 0.8rem;
+}
