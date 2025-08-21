@@ -2,8 +2,6 @@
 @use './styles/abstracts/mixins';
 @use './styles/base/reset';
 @use './styles/base/typography';
-@use './styles/components/buttons';
-@use './styles/components/forms';
 @use './styles/components/images';
 @use './styles/pages/loginSignup';
 @use './styles/components/footer';
@@ -12,7 +10,6 @@
 @use './styles/components/commentCrousel.scss';
 @use './styles/components/imageSlider.scss';
 @use './styles/components/card';
-@use './styles/components/layout';
 @use './styles/components/subscribe';
 @use './styles/components/userform';
 @use './styles/components/userTable';

@@ -4,7 +4,8 @@ import { UsersTable } from './UsersTable'
 export const TechPartner = () => {
   return (
     <div>
-      <UsersTable/>
+      {/* <UsersTable/> */}
+      Tech Partner
     </div>
   )
 }

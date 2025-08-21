@@ -22,18 +22,7 @@ const Routes = [
         index: true,
         element: <Home />,
       },
-      {
-        path: "login",
-        element: <Login />,
-      },
-      {
-        path: "signup",
-        element: <Signup />,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
+
       {
         path: "tech-partner",
         element: <TechPartner />,
@@ -44,11 +33,11 @@ const Routes = [
       },
       {
         path: "user-form",
-        element: <UserForm />
+        element: <UserForm />,
       },
       {
         path: "payment",
-        element: <Payment />
+        element: <Payment />,
       },
       {
         path: "blog",
@@ -56,15 +45,28 @@ const Routes = [
       },
       {
         path: "contact",
-        element: <ContactUs />
+        element: <ContactUs />,
       },
       {
         path: "user-table",
-        element: <UsersTable />
-      }
+        element: <UsersTable />,
+      },
     ],
   },
 
+  {
+    path: "/about",
+    element: <About />,
+  },
+
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
 ];
 
 export default Routes;
