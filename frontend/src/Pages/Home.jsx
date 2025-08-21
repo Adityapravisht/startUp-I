@@ -1,38 +1,28 @@
-import Navbar from "../components/navigation/Navbar";
-import MyNewCarousel from "../components/Functionalities/MyCrousel";
-import BothCards from "../components/Layout/bothCards";
+
+import MyNewCarousel from "../components/functionalities/MyCrousel";
+import BothCards from "../components/layout/bothCards";
 import CommentCarousel from "../components/functionalities/CommentCrousel";
-import ImageSlider from "../components/Functionalities/ImageSlider";
-import HomeTop from "../components/Atoms/HomeTop";
+import ImageSlider from "../components/functionalities/ImageSlider";
+import BookViewer from "../components/functionalities/BookViewer";
 import TrendingNews from "../components/Atoms/TrendingNew";
 import Suggestions from "../components/Atoms/Suggestions";
 import Menu from "../components/Atoms/Menu";
+import { FooterBg } from "../components/navigation/FooterBg";
 
 const Home = () => {
   return (
-    <div style={{ height: "100vh", position: "relative",backgroundColor:'white',color:'gray' }}>
-      <Navbar />
-      <HomeTop/>
-      <TrendingNews/>
+    <div>
       <CommentCarousel />
       <BothCards />
       <MyNewCarousel />
-      <Suggestions/>
-
       <ImageSlider />
-
-
+      <BookViewer />
+      <TrendingNews/>
+    
       <Menu/>
+     <Suggestions/>
+      <FooterBg />
 
-      {/* <UsersList/> */}
-
-      
-      {/* <Upload/> */}
-      {/* <BookViewer/> */}
-      {/* <div style={{ marginTop: "10rem" }}>
-        <Footer />
-
-      </div> */}
     </div>
   );
 };

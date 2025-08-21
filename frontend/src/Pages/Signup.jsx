@@ -1,21 +1,16 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-
 import axios from "axios";
-
 import { useNavigate } from "react-router-dom";
 import "../index.css";
 import { toast } from "react-toastify";
-import MyImage from "../components/atoms/MyImage";
-
+import Image from "../components/atoms/MyImage";
 import MyButton from "../components/atoms/MyButton";
 import MyInput from "../components/atoms/MyInput";
 
-
-
-const Login = () => {
+const Signup = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [loginError, setLoginError] = useState("");
+  const [SignupError, setLoginError] = useState("");
   const navigate = useNavigate();
 
   const {
@@ -29,24 +24,23 @@ const Login = () => {
     setLoginError("");
 
     try {
-      // Replace with your actual API endpoint
       const response = await axios.post(
-        "http://localhost:8000/client/login",
-        data,
-        { withCredentials: true }
+        "http://localhost:8000/client/signup",
+        data
       );
 
-      // Store JWT token and user data
       localStorage.setItem("authToken", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user));
-      toast.success("Logged in ");
 
-      navigate("/");
+      navigate("/login");
+
+      toast.success(response.data.message);
+
     } catch (error) {
-      console.error("Login error:", error);
+      console.error("signup error:", error);
       setLoginError(
         error.response?.data?.message ||
-          "Login failed. Please check your credentials."
+          "signup failed. Please check your credentials."
       );
       toast.error(error.response?.data?.message);
     } finally {
@@ -73,27 +67,24 @@ const Login = () => {
   ];
 
   return (
-
     <div className="MyLoginPage ">
-
-      {/* Background MyImage Section */}
-      <div className="loginBg ">
-        <div className="flex-column upper_content">
+      {/* Background Image Section */}
+      <div className="background_image">
+        <div className="flex-column ">
           {/* Top Section */}
-          <div className="flex-column imageHeading">
+          <div className="flex-column ">
             <div>
-              <MyImage src={"./StartUp&I.png"} alt={"startUpImage"} />
-              <img src="latestImage.png" alt="" />
+              <Image src={"./StartUp&I.png"} alt={"startUpImage"} />
             </div>
             <div>
-              <MyImage src={"./latestImage.png"} alt={"latestImage"} />
+              <Image src={"./latestImage.png"} alt={"latestImage"} />
             </div>
           </div>
 
           {/* Middle Section */}
-          <div className=" imageContainer">
+          <div className="flex-center imageContainer">
             {imagesValues.map((image, idx) => (
-              <MyImage
+              <Image
                 src={image.src}
                 alt={image.alt}
                 className={image.className}
@@ -111,15 +102,35 @@ const Login = () => {
       </div>
 
       {/* Form Section */}
-      <div className="flex-column formSection">
-        <h1 className="heading">Login</h1>
+      <div className="formSection">
+        <h1 className="heading">Signup</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="formField">
+            <MyInput
+              type="text"
+              className="formInputs"
+              // style = {{border:'2px solid black'}} 
+              placeholder="Name"
+              name="name"
+              register={register}
+              required="Name is required"
+              minLength={{
+                value: 4,
+                message: "Min length is 4 ",
+              }}
+            />
+          </div>
+          {errors.name && (
+            <p className="error-message">{errors.name.message}</p>
+          )}
+
           <div className="formField">
             <i className="fa-solid fa-user icon_Style"></i>
 
             <MyInput
               type="email"
               className="formInputs"
+              
               placeholder="Email"
               name="email"
               register={register}
@@ -136,7 +147,7 @@ const Login = () => {
 
           <div className="formField">
             {/* <img src="./lock_icon.png" alt="lock_image" /> */}
-            <MyImage src={"./lock_icon.png"} alt={"lock_image"} />
+            <Image src={"./lock_icon.png"} alt={"lock_image"} />
 
             <MyInput
               type="password"
@@ -156,22 +167,21 @@ const Login = () => {
           )}
 
           {/* Display login error */}
-          {loginError && <p className="error-message">{loginError}</p>}
+          {SignupError && <p className="error-message">{SignupError}</p>}
 
-          <div
-            style={{ display: "flex", width: "100%", justifyContent: "center" }}
-          >
+          <div>
             <MyButton
               type={"submit"}
-              className={`loginButton `}
+              className={"loginButton"}
               disabled={isLoading}
-              name="Login"
+              name='Signup'
             />
           </div>
         </form>
       </div>
     </div>
   );
-};
 
-export default Login;
+  };
+
+export default Signup;

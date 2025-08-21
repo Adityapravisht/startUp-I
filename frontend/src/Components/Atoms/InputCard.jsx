@@ -1,18 +1,17 @@
-import React from "react";
 import MyImage from "./MyImage";
+
 
 const InputCard = () => {
   return (
     <div style={{ display: "flex"}}>
       {/* left image */}
-      <div style={{ width: "" }}>
+      <div>
         <MyImage
           src={"./cardLeftImage.jpg"}
           alt={"cardLeftImg"}
           className="cardLeftImg"
         />
       </div>
-
       {/* right card */}
       <div
         className="roboto-regular rightCardCont"
@@ -24,12 +23,12 @@ const InputCard = () => {
             className="girlImage"
           />
         </div>
-        <div style={{}}>
+        <div>
           <h1 className="parahead roboto-medium">
             Enjoyed the read?
           </h1>
           <p
-            
+
             className="cardPara"
           >
             Join our monthly newsletter for helpful tips on how to run your
@@ -37,7 +36,7 @@ const InputCard = () => {
             business smoothly
           </p>
           <div
-            
+
             className="flex-center"
           >
             <input
@@ -45,11 +44,11 @@ const InputCard = () => {
               name=""
               id=""
               placeholder="Your Email"
-              
+
               className="cardInp"
             />
             <button
-              
+
               className="cardBtn"
             >
               Subscribe

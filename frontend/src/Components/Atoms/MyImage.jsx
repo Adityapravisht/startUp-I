@@ -1,4 +1,7 @@
 import PropTypes from 'prop-types'
+
+import React from 'react'
+
 import MyInput from './MyInput'
 
 const MyImage = ({src, alt, className}) => {
