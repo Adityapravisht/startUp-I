@@ -13,16 +13,13 @@ const Home = () => {
   return (
     <div>
       <HomeTop />
-      <ImageSlider />
+      {/* <ImageSlider /> */}
       <Suggestions />
       <MyNewCarousel />
-
       <CommentCarousel />
       <TrendingNews />
-
       <BothCards />
       <BookViewer />
-
       <FooterBg />
     </div>
   );

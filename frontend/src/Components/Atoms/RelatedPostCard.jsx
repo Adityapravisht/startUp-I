@@ -48,3 +48,4 @@ const RelatedPostCard = () => {
 };
 
 export default RelatedPostCard;
+

@@ -11,6 +11,7 @@ const MyButton = ({ type, className, disabled, name, onClick, icon }) => {
     >
       {icon && <span style={{ marginRight: "6px" }}>{icon}</span>}
       {disabled ? `${name}...` : name}
+
     </button>
   );
 };

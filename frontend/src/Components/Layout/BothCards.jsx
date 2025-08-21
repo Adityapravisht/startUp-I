@@ -5,6 +5,8 @@ import InputCard from '../atoms/InputCard'
 const BothCards = () => {
   return (
     <div style={{width:'100%',padding:'1rem',display:'flex'}}>
+
+    {/* // style={{width:'100%',padding:'1rem',display:'flex'}}> */}
         <RelatedPostCard/>
         <InputCard/>
     </div>

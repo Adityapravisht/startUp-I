@@ -67,7 +67,7 @@ export const UserForm = () => {
             RENEWAL
           </label>
         </div>
-        {/* {errors.subscriptionType && <p className="error">{errors.subscriptionType.message}</p>} */}
+
 
         <div className="user-form-container">
           {/* Form */}

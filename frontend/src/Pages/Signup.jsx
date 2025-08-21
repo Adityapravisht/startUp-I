@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import axios from "axios";
+import axios, { all } from "axios";
 import { useNavigate } from "react-router-dom";
 import "../index.css";
 import { toast } from "react-toastify";
-import Image from "../components/atoms/MyImage";
+import MyImage from "../components/atoms/MyImage";
 import MyInput from "../components/atoms/MyInput";
-import MyButton from "../components/atoms/MyButton";
+import MyButton from "../components/Atoms/MyButton";
 
-const Signup = () => {
+
+const SignUp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [SignupError, setLoginError] = useState("");
   const navigate = useNavigate();
@@ -74,17 +75,17 @@ const Signup = () => {
           {/* Top Section */}
           <div className="flex-column ">
             <div>
-              <Image src={"./StartUp&I.png"} alt={"startUpImage"} />
+              <MyImage src={"./StartUp&I.png"} alt={"startUpImage"} />
             </div>
             <div>
-              <Image src={"./latestImage.png"} alt={"latestImage"} />
+              <MyImage src={"./latestImage.png"} alt={"latestImage"} />
             </div>
           </div>
 
           {/* Middle Section */}
           <div className="flex-center imageContainer">
             {imagesValues.map((image, idx) => (
-              <Image
+              <MyImage
                 src={image.src}
                 alt={image.alt}
                 className={image.className}
@@ -147,7 +148,7 @@ const Signup = () => {
 
           <div className="formField">
             {/* <img src="./lock_icon.png" alt="lock_image" /> */}
-            <Image src={"./lock_icon.png"} alt={"lock_image"} />
+            <MyImage src={"./lock_icon.png"} alt={"lock_image"} />
 
             <MyInput
               type="password"
@@ -184,4 +185,4 @@ const Signup = () => {
 
   };
 
-export default Signup;
+export default SignUp;

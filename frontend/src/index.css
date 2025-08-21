@@ -9,14 +9,28 @@ body {
 }
 
 .loginBg {
-
   background-image: url("./loginImage.png");
+}
+
+.topHeading {
+  font-size: 2.4rem;
+}
+
+.storyHead {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .bookImg {
   height: 40px;
-
   font-size: 4rem;
+  /* margin-left: 8px; */
+}
+
+.storyPara {
+  margin-top: 1rem;
+  font-size: 20px;
 }
 
 .home-top {
