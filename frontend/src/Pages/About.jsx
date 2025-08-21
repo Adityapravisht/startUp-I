@@ -1,14 +1,9 @@
-import React from 'react'
-import BookViewer from '../components/functionalities/BookViewer'
-import BothCards from '../components/layout/bothCards'
+import Menu from "../components/atoms/Menu";
 
 export const About = () => {
   return (
     <div>
-       <BothCards />
-
-      {/* <BookViewer/>  */}
-      
+      <Menu />
     </div>
-  )
-}
+  );
+};
