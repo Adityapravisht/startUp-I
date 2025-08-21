@@ -1,6 +1,7 @@
 // src/Components/Carousel/CustomCarousel.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import Mycard from "../Atoms/Mycard";
 
 const MyCarousel = () => {
   const crouselValue = [
@@ -86,8 +87,9 @@ const MyCarousel = () => {
                       key={cardIndex} 
                       className="carousel-card"
                     >
-                      {value}
+                      <Mycard title={value} />
                     </div>
+                    
                   ))
                 }
               </div>

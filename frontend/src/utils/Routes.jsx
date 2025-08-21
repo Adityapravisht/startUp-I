@@ -11,6 +11,8 @@ import { UserForm } from "../pages/UserForm";
 import { Payment } from "../pages/Payment";
 import { UsersTable } from "../pages/UsersTable";
 
+// import PhoneSignup from "../Pages/PhoneSignup";
+
 const Routes = [
   {
     path: "/",
@@ -62,6 +64,7 @@ const Routes = [
       }
     ],
   },
+
 ];
 
 export default Routes;

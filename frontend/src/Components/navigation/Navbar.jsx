@@ -1,3 +1,4 @@
+
 import MyImage from "../atoms/MyImage";
 import MyButton from "../atoms/MyButton";
 import { Link } from "react-router-dom";
@@ -10,9 +11,11 @@ import { BsSun } from "react-icons/bs";
 import MyInput from "../atoms/MyInput";
 import { useState } from "react";
 
+
 const Navbar = () => {
   const darkMode = useThemeStore((state) => state.darkMode);
   const toggleTheme = useThemeStore((state) => state.toggleTheme);
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -41,10 +44,12 @@ const Navbar = () => {
             <li><Link to="/subscribe">Subscribe</Link></li>
             <li><Link to="/blog">Blog</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
+
           </ul>
         </nav>
 
         <div className="nav-actions">
+
           <button onClick={toggleTheme} className="themeToggle">
             {darkMode ? <BsMoon /> : <BsSun />}
           </button>
@@ -52,6 +57,7 @@ const Navbar = () => {
           <div className="nav-search">
             <IoSearchOutline />
             <MyInput placeholder="Search…" />
+
           </div>
 
           <MyButton className="searchBtn" name="Search" />
@@ -60,12 +66,15 @@ const Navbar = () => {
     </header>
 
 
+
   );
 };
 
 
 
 export default Navbar;
+
+
 
 
 

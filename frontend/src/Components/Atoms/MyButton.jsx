@@ -14,18 +14,21 @@ const MyButton = ({ type, className, disabled, name, onClick }) => {
   );
 };
 
-MyButton.prototypes = {
-  type: PropTypes.string,
-  className: PropTypes,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-};
+
+MyButton.propTypes = {
+  type:PropTypes.string,
+  className:PropTypes,
+  disabled:PropTypes.bool,
+  name:PropTypes.string,
+   onClick: PropTypes.func,
+}
 
 MyButton.defaultProp = {
-  type: "text",
-  className: "",
-  disabled: false,
+  type:'submit',
+  className:"",
+  disabled:false,
+  name:"",
   onClick: () => {},
-};
+}
 
 export default MyButton;

@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
+
 import React from 'react'
+
 import MyInput from './MyInput'
 
 const MyImage = ({src, alt, className}) => {
@@ -8,7 +10,7 @@ const MyImage = ({src, alt, className}) => {
   )
 }
 
-MyImage.prototypes = {
+MyImage.propTypes = {
   src : PropTypes.string.isRequired,
   alt : PropTypes.string,
   className: PropTypes.string,
@@ -20,4 +22,4 @@ MyInput.defaultProps = {
   className:'',
 }
 
-export default MyImage
+export default MyImage;

@@ -9,5 +9,17 @@ body {
 }
 
 .loginBg {
-  background-image: url('./loginImage.png');
+
+  background-image: url("./loginImage.png");
+}
+
+.bookImg {
+  height: 40px;
+
+  font-size: 4rem;
+}
+
+.home-top {
+  padding: 4rem;
+  width: 80%;
 }

@@ -1,8 +1,33 @@
 import * as clientServices from "../services/clientServices.js";
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
+import passport from "passport";
 
 dotenv.config();
+
+// passport auth
+export const connectPassport = () => {
+  passport.use(
+    new GoogleStrategy(
+      {
+        clientID: "asd",
+        clientSecret: "asd",
+        callbackURL: "asd",
+      },
+      // this function run for login or register
+      async function (accessToken, refreshToken, done) {
+        // database comes here
+      }
+    )
+  );
+  passport.serializeUser((user, done) => {
+    done(null, user.id);
+  });
+  passport.deserializeUser(async(id,done)=>{
+    // const user =  await User.findById()
+    done(null,user);
+  })
+};
 
 export const register = async (req, res) => {
   try {
@@ -54,10 +79,11 @@ export const login = async (req, res) => {
       return res
         .cookie("token", token, {
           httpOnly: true,
-          secure: false, 
+          secure: false,
           sameSite: "lax",
-          path: "/", 
-        }).json({ message: "user logged in" });
+          path: "/",
+        })
+        .json({ message: "user logged in" });
     });
   } catch (error) {
     console.error("Login error:", error);

@@ -1,5 +1,7 @@
 // import React from "react";
+
 import MyImage from "../atoms/MyImage";
+
 import { MdLocationPin } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { MdMail } from "react-icons/md";
@@ -23,6 +25,7 @@ const socialImg = [
   },
 ];
 
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -33,6 +36,7 @@ const Footer = () => {
       </div> */}
 
       <div className="footer-content">
+
         <div className="footer-left">
           <MyImage src={"StartUp&I.png"} className="footerStrartUpImg" />
 
@@ -52,6 +56,7 @@ const Footer = () => {
 
         {/* Middle column: Quick Links */}
         <div className="footer-middle">
+
           <p>Quick Links</p>
           <ul className="links">
             <li>
@@ -71,13 +76,16 @@ const Footer = () => {
             </li>
             <li>
               <a href="/blog">Blog</a>
+
             </li>
           </ul>
         </div>
 
         {/* Right column: Contact information */}
         <div className="footer-right">
+
           <p >Contact Us</p>
+
           <ul>
             <li className="contact-info">
               <MdLocationPin />

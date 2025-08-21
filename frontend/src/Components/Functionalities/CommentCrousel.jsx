@@ -2,6 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import MyImage from "../atoms/MyImage";
 
+import Mycard from "../atoms/Mycard";
+
+
+
 const CommentCarousel = () => {
   const allComments = [
     {
@@ -130,23 +134,19 @@ const CommentCarousel = () => {
                     )
                     .map((comment, cardIndex) => (
                       <motion.div key={cardIndex} className="comment-card">
-                        <div>
-                          <MyImage src={"./comma.png"} alt={"comma"} />
-                        </div>
-                        <div className="comment-text">
-                          {comment.commmentDescription}
-                        </div>
-                        <div className="comment-footer">
-                          <MyImage src={comment.userAvatar} alt={"avatar"} />
-                          <p>{comment.userName}</p>
-                          <MyImage src={"./spotify.png"} alt={"spotify"} />
-                        </div>
+                        <Mycard
+                          description={comment.commmentDescription}
+                          avatar={comment.userAvatar}
+                          userName={comment.userName}
+                        />
                       </motion.div>
                     ))}
                 </div>
               ))}
           </motion.div>
         </div>
+
+        {/* action buttons */}
 
         <div
           style={{
