@@ -39,18 +39,17 @@ const Menu = () => {
 //         <p className="LinkHead">General</p>
 //         <Link className="menuLink roboto-regular">
 // =======
-  <div className="menuCont">
+  <div className="menuCont ">
       {/* Logo Section */}
-      <Link to="/" className=" menuHead">
+      <Link to="/" className=" menuHead menuLink">
         <MyImage src="./thunderLogo.png" alt="thunderLogo" className="menulogo" />
         <span className="appTitle">News App</span>
       </Link>
 
       {/* Dashboard */}
       <div className="menuSection">
-        <p className="linkHead">General</p>
+        <p className="linkHead roboto-bold ">General</p>
         <Link className="menuLink">
-{/* >>>>>>> d1973111488bf2da0eb7301818a624e683faf9e5 */}
           <BsSpeedometer2 />
           <span>Dashboard</span>
         </Link>
@@ -58,7 +57,7 @@ const Menu = () => {
 
       {/* News Management */}
       <div className="menuSection">
-        <p className="linkHead">News Management</p>
+        <p className="linkHead roboto-bold">News Management</p>
         {menuData.map((data, idx) => (
           <Link className="menuLink" to={data.to} key={idx}>
             {data.icon}
@@ -69,7 +68,7 @@ const Menu = () => {
 
       {/* Home Screen */}
       <div className="menuSection">
-        <p className="linkHead">Home Screen Management</p>
+        <p className="linkHead roboto-bold">Home Screen Management</p>
         <Link className="menuLink">
           <MdOutlineFeaturedPlayList />
           <span>Featured Section</span>
@@ -82,7 +81,7 @@ const Menu = () => {
 
       {/* User Management */}
       <div className="menuSection">
-        <p className="linkHead">User Management</p>
+        <p className="linkHead roboto-bold">User Management</p>
         <Link className="menuLink">
           <FaUser />
           <span>User</span>

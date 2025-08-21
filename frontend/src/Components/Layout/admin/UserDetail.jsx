@@ -52,7 +52,7 @@ const UserDetail = () => {
           style={{ display: "flex", alignItems: "center" }}
           className="roboto-bold"
         >
-          <p style={{ fontSize: "24px", color: "gray" }}>Subscription: </p>
+          <p style={{ fontSize: "24px", color: "gray",paddingInline:'30px' }}>Subscription: </p>
           <span>16 June,25-Priya Sharma</span>
         </div>
         <div style={{ display: "flex", gap: "10px" }}>

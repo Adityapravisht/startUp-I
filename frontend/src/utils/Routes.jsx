@@ -23,10 +23,6 @@ const Routes = [
       },
 
       {
-        path: "tech-partner",
-        element: <TechPartner />,
-      },
-      {
         path: "subscribe",
         element: <Subscribe />,
       },
@@ -63,6 +59,10 @@ const Routes = [
   {
     path: "about",
     element: <About />,
+  },
+  {
+    path: "tech-partner",
+    element: <TechPartner />,
   },
 ];
 
