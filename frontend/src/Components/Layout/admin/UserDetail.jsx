@@ -19,7 +19,23 @@ const UserDetail = () => {
     },
   ];
 
-  
+  const addressdata = [
+    {
+      type: "Billing Address",
+      location1: "11 Dalanwala",
+      city: "Dehradun",
+      pincode: "248001",
+      country: "India",
+    },
+    {
+      type: "Shipping Address",
+      location1: "11 Dalanwala",
+      city: "Dehradun",
+      pincode: "248001",
+      country: "India",
+    },
+  ];
+
 
   return (
     <div className="userDtailCont">
@@ -44,15 +60,14 @@ const UserDetail = () => {
       </div>
 
       {/* details head */}
-      <div
-        
-        className="detailsHead"
-      >
+      <div className="detailsHead">
         <div
           style={{ display: "flex", alignItems: "center" }}
           className="roboto-bold"
         >
-          <p style={{ fontSize: "24px", color: "gray",paddingInline:'30px' }}>Subscription: </p>
+          <p style={{ fontSize: "24px", color: "gray", paddingInline: "30px" }}>
+            Subscription:{" "}
+          </p>
           <span>16 June,25-Priya Sharma</span>
         </div>
         <div style={{ display: "flex", gap: "10px" }}>
@@ -72,10 +87,7 @@ const UserDetail = () => {
       </div>
 
       {/* details card */}
-      <div
-       
-        className="cardCont"
-      >
+      <div className="cardCont">
         {/* card 1 */}
         <div className="card1 shadowButtonBlack" style={{}}>
           <div
@@ -147,14 +159,19 @@ const UserDetail = () => {
                 <div>
                   <p style={{ marginBlock: "10px" }}>
                     Subtotal
-                    <span style={{ marginLeft: "45px",color:'gray' }}>&#8377;3024</span>
+                    <span style={{ marginLeft: "45px", color: "gray" }}>
+                      &#8377;3024
+                    </span>
                   </p>
                   <p style={{ marginBlock: "10px" }}>
-                    GST And Taxes <span style={{color:'gray'}}>&#8377;98</span>
+                    GST And Taxes{" "}
+                    <span style={{ color: "gray" }}>&#8377;98</span>
                   </p>
-                  <p style={{ marginBlock: "10px", }}>
+                  <p style={{ marginBlock: "10px" }}>
                     Total
-                    <span style={{ marginLeft: "70px",color:'gray' }}>&#8377;3423</span>
+                    <span style={{ marginLeft: "70px", color: "gray" }}>
+                      &#8377;3423
+                    </span>
                   </p>
                 </div>
               </div>
@@ -167,7 +184,7 @@ const UserDetail = () => {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                padding:'10px',
+                padding: "10px",
               }}
             >
               <p>Mode Of Payment</p>
@@ -210,32 +227,28 @@ const UserDetail = () => {
             </p>
           </div>
 
-          <h1 className="roboto-bold" style={{ paddingBlock: "1rem" }}>
-            Billing Address
-          </h1>
-          <div>
+          {addressdata.map((data, idx) => (
             <div>
-              <p>11 Dalanwala</p>
-              <p>Dehradun</p>
-              <p>248001</p>
-              <p>India</p>
+              <h1 className="roboto-bold" style={{ paddingBlock: "1rem" }}>
+                {data.type}
+              </h1>
+              <div>
+                <div>
+                  <p>{data.location1}</p>
+                  <p>{data.city}</p>
+                  <p>{data.pincode}</p>
+                  <p>{data.country}</p>
+                </div>
+              </div>
             </div>
-            <MyButton
-              type={"button"}
-              name={"Update Shipping Address"}
-              className={"addressUpdBtn"}
-            />
-          </div>
+          ))}
 
-          <h1 className="roboto-bold" style={{ paddingBlock: "1rem" }}>
-            Shipping Address
-          </h1>
-          <div>
-            <p>11 Dalanwala</p>
-            <p>Dehradun</p>
-            <p>248001</p>
-            <p>India</p>
-          </div>
+         
+          <MyButton
+            type={"button"}
+            name={"Update Shipping Address"}
+            className={"addressUpdBtn"}
+          />
         </div>
 
         {/* card 3 */}

@@ -4,7 +4,7 @@ import { UsersTable } from "./UsersTable";
 
 export const About = () => {
   return (
-    <div className="subsDashboard">
+    <div className="subsDashboard" style={{}}>
       <Menu />
       <div className="contentArea" >
         <UsersTable />
