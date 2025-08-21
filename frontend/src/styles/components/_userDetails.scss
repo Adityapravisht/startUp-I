@@ -1,0 +1,112 @@
+.grayText {
+    color: gray;
+}
+
+.navSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+.selectButton1 {
+    background-color: #CD0300;
+    padding: 10px;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cardCont {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem;
+    height: auto;
+}
+
+.detailsHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selectButton2 {
+    padding: 10px;
+    border-radius: 12px;
+    color: #CD0300;
+    border: 1px solid #CD0300;
+    cursor: pointer;
+}
+
+.userDtailCont {
+    padding-inline: 1rem;
+}
+
+.shadowButtonBlack {
+    box-shadow: 0px 4px 6px rgba(15, 14, 14, 0.2);
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.shadowButtonwhite {
+    box-shadow: 0px 4px 6px rgba(201, 198, 198, 0.2);
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.addressUpdBtn {
+    color: #CD0300;
+    font-size: large;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #CD0300;
+    margin-top: 12px;
+}
+
+.card1 {
+    padding: 1.3rem;
+    min-width: 60%;
+    height: fit-content;
+
+    @media(max-width:1080px) {
+        min-width: 90%;
+    }
+}
+
+.card2 {
+    font-size: 1rem;
+    color: #4F4F4F;
+    padding: 1rem;
+
+    @media(max-width:1080px) {
+        min-width: 90%;
+    }
+}
+
+.card3 {
+    font-size: 1rem;
+    color: #4F4F4F;
+    padding: 1rem;
+    width: 60%;
+
+    @media(min-width:1080px) {
+        position: relative;
+        bottom: 95px;
+    }
+
+    @media(max-width:1080px) {
+        min-width: 90%;
+    }
+}
+
+.dateBadge {
+    display: flex;
+    padding: 10px;
+    align-content: center;
+    gap: 10px;
+    justify-content: space-between;
+}
