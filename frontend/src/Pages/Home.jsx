@@ -1,17 +1,12 @@
-import React from "react";
-import Navbar from "../Components/Layout/Navbar";
-import Footer from "../Components/Layout/Footer";
-import MyNewCarousel from "../Components/Functionalities/MyCrousel";
-import BothCards from "../Components/Layout/bothCards";
-import CommentCarousel from "../Components/Functionalities/CommentCrousel";
-import ImageSlider from "../Components/Functionalities/ImageSlider";
-import Upload from "../Components/Atoms/Upload";
-import BookViewer from "../Components/Functionalities/BookViewer";
-import HomeTop from "../Components/Atoms/HomeTop";
-import TrendingNews from "../Components/Atoms/TrendingNew";
-import Suggestions from "../Components/Atoms/Suggestions";
-import Menu from "../Components/Atoms/Menu";
-import UsersList from "./UsersList";
+import Navbar from "../components/navigation/Navbar";
+import MyNewCarousel from "../components/Functionalities/MyCrousel";
+import BothCards from "../components/Layout/bothCards";
+import CommentCarousel from "../components/functionalities/CommentCrousel";
+import ImageSlider from "../components/Functionalities/ImageSlider";
+import HomeTop from "../components/Atoms/HomeTop";
+import TrendingNews from "../components/Atoms/TrendingNew";
+import Suggestions from "../components/Atoms/Suggestions";
+import Menu from "../components/Atoms/Menu";
 
 const Home = () => {
   return (

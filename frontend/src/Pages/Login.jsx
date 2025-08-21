@@ -4,11 +4,12 @@ import axios, { all } from "axios";
 import { useNavigate } from "react-router-dom";
 import "../index.css";
 import { toast } from "react-toastify";
-import MyImage from "../Components/Atoms/MyImage";
-import MyButton from "../Components/Atoms/MyButton";
-import MyInput from "../Components/Atoms/MyInput";
+import MyImage from "../components/atoms/MyImage";
+import MyInput from "../components/atoms/MyInput";
+import MyButton from "../components/Atoms/MyButton";
 
-const LoginPage = () => {
+
+const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [loginError, setLoginError] = useState("");
   const navigate = useNavigate();
@@ -68,7 +69,7 @@ const LoginPage = () => {
   ];
 
   return (
-    <div className="MyLoginPage ">
+    <div className="MyLogin ">
       {/* Background MyImage Section */}
       <div className="loginBg ">
         <div className="flex-column upper_content">
@@ -167,4 +168,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Login;

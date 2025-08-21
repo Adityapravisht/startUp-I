@@ -1,7 +1,8 @@
 import { element } from "prop-types";
-import Home from "../Pages/Home";
-import LoginPage from "../Pages/LoginPage";
-import SignupPage from "../Pages/SignupPage";
+import Home from "../pages/Home";
+import Login from "../pages/Login";
+import SignUp from "../pages/SignUp";
+
 // import PhoneSignup from "../Pages/PhoneSignup";
 
 const Routes = [
@@ -11,11 +12,11 @@ const Routes = [
   },
   {
     path: "/login",
-    element: <LoginPage/>,
+    element: <Login/>,
   },
   {
     path: "/signup",
-    element: <SignupPage/>,
+    element: <SignUp/>,
   },
  
 ];

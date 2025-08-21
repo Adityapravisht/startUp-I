@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import MyImage from "../Atoms/MyImage";
+import MyImage from "../atoms/MyImage";
 import Mycard from "../Atoms/Mycard";
+
 
 const CommentCarousel = () => {
   const allComments = [

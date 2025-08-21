@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
-import React from 'react'
-import MyInputs from './MyInput'
+import MyInput from './MyInput'
 
 const MyImage = ({src, alt, className}) => {
   return (
@@ -14,10 +13,10 @@ MyImage.propTypes = {
   className: PropTypes.string,
 }
 
-MyInputs.defaultProps = {
+MyInput.defaultProps = {
   src:"",
   alt:'',
   className:'',
 }
 
-export default MyImage
+export default MyImage;
