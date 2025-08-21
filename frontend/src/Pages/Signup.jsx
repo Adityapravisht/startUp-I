@@ -69,10 +69,8 @@ const SignUp = () => {
 
   return (
     <div className="MyLoginPage ">
-      {/* Background Image Section */}
       <div className="background_image">
         <div className="flex-column ">
-          {/* Top Section */}
           <div className="flex-column ">
             <div>
               <MyImage src={"./StartUp&I.png"} alt={"startUpImage"} />
@@ -94,7 +92,6 @@ const SignUp = () => {
             ))}
           </div>
 
-          {/* Bottom Section */}
           <p className="loginPageMessage">
             Stay Ahead with the Latest News, Exclusive Stories, and Premium
             Features — All in One Subscription.
