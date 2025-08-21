@@ -5,14 +5,13 @@ import { Subscribe } from "../pages/Subscribe";
 import { Blog } from "../pages/Blog";
 import { Layout } from "../components/layout/Layout";
 import Login from "../pages/Login";
-import Signup from "../pages/Signup";
 import { ContactUs } from "../pages/ContactUs";
 import { UserForm } from "../pages/UserForm";
 import { Payment } from "../pages/Payment";
 import { UsersTable } from "../pages/UsersTable";
+import Signup from "../pages/SignUp";
 
 // import PhoneSignup from "../Pages/PhoneSignup";
-
 const Routes = [
   {
     path: "/",
@@ -22,18 +21,7 @@ const Routes = [
         index: true,
         element: <Home />,
       },
-      {
-        path: "login",
-        element: <Login />,
-      },
-      {
-        path: "signup",
-        element: <Signup />,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
+
       {
         path: "tech-partner",
         element: <TechPartner />,
@@ -44,11 +32,11 @@ const Routes = [
       },
       {
         path: "user-form",
-        element: <UserForm />
+        element: <UserForm />,
       },
       {
         path: "payment",
-        element: <Payment />
+        element: <Payment />,
       },
       {
         path: "blog",
@@ -56,15 +44,26 @@ const Routes = [
       },
       {
         path: "contact",
-        element: <ContactUs />
+        element: <ContactUs />,
       },
       {
         path: "user-table",
-        element: <UsersTable />
-      }
+        element: <UsersTable />,
+      },
     ],
   },
-
+  {
+    path: "login",
+    element: <Login />,
+  },
+  {
+    path: "signup",
+    element: <Signup />,
+  },
+  {
+    path: "about",
+    element: <About />,
+  },
 ];
 
 export default Routes;

@@ -1,9 +1,9 @@
 import React from 'react'
 import MyImage from '../components/atoms/MyImage'
-import MyButton from '../components/atoms/MyButton';
 import { FooterBg } from '../components/navigation/FooterBg';
 import { UserForm } from './UserForm';
 import { useNavigate } from 'react-router-dom';
+import MyButton from '../components/atoms/MyButton';
 
 export const Subscribe = () => {
 

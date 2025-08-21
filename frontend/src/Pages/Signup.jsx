@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import "../index.css";
 import { toast } from "react-toastify";
 import Image from "../components/atoms/MyImage";
-import MyButton from "../components/atoms/MyButton";
 import MyInput from "../components/atoms/MyInput";
+import MyButton from "../components/atoms/MyButton";
 
 const Signup = () => {
   const [isLoading, setIsLoading] = useState(false);

@@ -3,44 +3,7 @@ import PropTypes from "prop-types";
 import MyImage from "./MyImage";
 
 const Mycard = ({ classname, description, title, avatar, userName }) => {
-  //   const allComments = [
-  //     {
-  //       commmentDescription:
-  //         "Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua",
-  //       userName: "Luna lovegood",
-  //       userAvatar: "./avatar.png",
-  //     },
-  //     {
-  //       commmentDescription:
-  //         "Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua",
-  //       userName: "Luna lovegood",
-  //       userAvatar: "./avatar.png",
-  //     },
-  //     {
-  //       commmentDescription:
-  //         "Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua",
-  //       userName: "Luna lovegood",
-  //       userAvatar: "./avatar.png",
-  //     },
-  //     {
-  //       commmentDescription:
-  //         "Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua",
-  //       userName: "Luna lovegood",
-  //       userAvatar: "./avatar.png",
-  //     },
-  //     {
-  //       commmentDescription:
-  //         "Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua",
-  //       userName: "Luna lovegood",
-  //       userAvatar: "./avatar.png",
-  //     },
-  //     {
-  //       commmentDescription:
-  //         "Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua",
-  //       userName: "Luna lovegood",
-  //       userAvatar: "./avatar.png",
-  //     },
-  //   ];
+
 
   return (
     <div>

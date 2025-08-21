@@ -5,7 +5,7 @@ const HomeTop = () => {
   return (
     <div className="top-bgImg ">
       <div className="home-top ">
-        <h1 className="roboto-bold" style={{fontSize:'2.4rem'}}>
+        <h1 className="roboto-bold" style={{ fontSize: "2.4rem" }}>
           <span style={{ fontSize: "4rem", color: "#D43939" }}>F</span>ueling
           the Future
         </h1>
@@ -17,7 +17,6 @@ const HomeTop = () => {
             alt={"bookImg"}
             className={"bookImg"}
           />
-          
         </h1>
         <br />
         <p className="roboto-regular">

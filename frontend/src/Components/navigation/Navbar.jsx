@@ -1,6 +1,5 @@
 
 import MyImage from "../atoms/MyImage";
-import MyButton from "../atoms/MyButton";
 import { Link } from "react-router-dom";
 import useThemeStore from "../../store/themeStore";
 import { IoSearchOutline } from "react-icons/io5";
@@ -10,6 +9,7 @@ import { BsMoon } from "react-icons/bs";
 import { BsSun } from "react-icons/bs";
 import MyInput from "../atoms/MyInput";
 import { useState } from "react";
+import MyButton from "../atoms/MyButton";
 
 
 const Navbar = () => {

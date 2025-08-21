@@ -28,14 +28,14 @@ const Menu = () => {
     <div className="menuCont">
       {/* menu logo*/}
       <div > 
-        <Link to={"/"} className="menuLink menuHead">
+        <Link to={"/"} className=" menuHead">
           <MyImage
             src={"./thunderLogo.png"}
             alt={"thunderLogo"}
             className={"menulogo"}
           />
 
-          <p style={{fontSize:'larger',color:'black'}}>News App</p>
+          <p style={{fontSize:'larger'}}>News App</p>
         </Link>
       </div>
 

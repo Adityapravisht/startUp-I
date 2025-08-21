@@ -14,29 +14,17 @@ const RelatedPostCard = () => {
   const postData = Array(3).fill(postTemplate);
 
   return (
-    <div
-      className="roboto-regular postCardCont"
-    >
-      <h1 style={{ fontSize: "1.5rem" }} className="roboto-bold">Related posts</h1>
-      {postData.map((data, idx) => (
-        <div
+    <div className="roboto-regular postCardCont">
+      <h1 className="roboto-bold relatedHeading">Related posts</h1>
 
-          className="postcardList"
-          key={idx}
-        >
-          <div style={{ padding: "10px" }}>
-            <MyImage
-              src={data.postImage}
-              alt={"postImage"}
-              className="postImg"
-            />
+      {postData.map((data, idx) => (
+        <div className="postcardList" key={idx}>
+          <div className="postImgCont">
+            <MyImage src={data.postImage} alt="postImage" className="postImg" />
           </div>
           <div className="postHead">
             <p>{data.postHead}</p>
-            <div
-
-              className="postdetail"
-            >
+            <div className="postdetail">
               <p>{data.postName}</p>
               <p>{data.postDate}</p>
               <p>{data.postComment}</p>
@@ -45,20 +33,14 @@ const RelatedPostCard = () => {
           </div>
         </div>
       ))}
-      <div>
-        <h1>Tags</h1>
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "2.4rem",
-            color: "gray",
-          }}
-        >
-          <p>Driving permits</p>
-          <p>Travel Log</p>
-          <p>Travel Info</p>
-          <p>Paradise</p>
+
+      <div className="postTags">
+        <h3 className="relatedHeading">Tags</h3>
+        <div className="tagList">
+          <p className="tag">Driving permits</p>
+          <p className="tag">Travel Log</p>
+          <p className="tag">Travel Info</p>
+          <p className="tag">Paradise</p>
         </div>
       </div>
     </div>
