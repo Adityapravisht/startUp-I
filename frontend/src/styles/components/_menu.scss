@@ -1,0 +1,51 @@
+.menuLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color:'gray'
+}
+
+.menuCont {
+    height: 100vh;
+    max-width: 300px;
+    // background-color: white;
+    padding: 1rem;
+    // overflow-y: auto;
+    border-right: 1px solid #beb7b7;
+}
+
+.menuHead {
+    display: flex;
+    // align-items: center;
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
+}
+
+.menulogo {
+    height: 3rem;
+}
+
+.menuLink {
+    text-decoration: none;
+    padding: 10px;
+    color:gray;
+    // font-family: monospace;
+    font-weight: bolder;
+}
+
+.menuLink:hover{
+    background-color: #e0dbdb;
+    border-radius: 10px;
+}
+
+.LinkHead{
+    font-size:large;
+    // color: gray;
+
+}
+p{
+    font-size:large;
+    // font-weight:700;
+    font-family: monospace;
+}

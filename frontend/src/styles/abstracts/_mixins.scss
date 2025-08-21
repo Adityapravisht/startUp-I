@@ -1,11 +1,12 @@
 
 
-@mixin background-image($img-path, $width: 50%, $padding-inline: 5rem, $padding-block: 5rem, $height: 100vh) {
+@mixin background-image($img-path, $width: 50%, $padding-inline: 5rem, $padding-block: 5rem, $height: 60vh) {
     background-image: url(#{$img-path});
     width: $width;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
+    // background-color: #fff;
     height: $height;
     padding-inline: $padding-inline;
     padding-block: $padding-block;

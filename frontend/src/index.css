@@ -4,10 +4,21 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
-.loginBg{
-  background-image: url('./loginImage.png');
+.loginBg {
+  background-image: url("./loginImage.png");
+}
+
+.bookImg {
+  height: 40px;
+
+  font-size: 4rem;
+}
+
+.home-top {
+  padding: 4rem;
+  width: 80%;
 }

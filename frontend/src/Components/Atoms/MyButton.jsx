@@ -9,16 +9,18 @@ const MyButton = ({type,className,disabled,name}) => {
   );
 };
 
-MyButton.prototypes = {
+MyButton.propTypes = {
   type:PropTypes.string,
   className:PropTypes,
-  disabled:PropTypes.bool
+  disabled:PropTypes.bool,
+  name:PropTypes.string,
 }
 
 MyButton.defaultProp = {
-  type:'text',
+  type:'submit',
   className:"",
   disabled:false,
+  name:"",
 }
 
 export default MyButton;

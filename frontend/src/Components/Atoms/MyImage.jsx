@@ -8,7 +8,7 @@ const MyImage = ({src, alt, className}) => {
   )
 }
 
-MyImage.prototypes = {
+MyImage.propTypes = {
   src : PropTypes.string.isRequired,
   alt : PropTypes.string,
   className: PropTypes.string,

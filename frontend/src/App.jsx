@@ -6,14 +6,20 @@ import useThemeStore from "./store/themeStore";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./app.scss";
 import Routes from "./utils/Routes";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Myvideo from "./media/Myvideo";
 import Upload from "./Components/Atoms/Upload";
+import Mycard from "./Components/Atoms/Mycard";
+// import PhoneSignup from "./Pages/PhoneSignup";
 
 function App() {
   const darkMode = useThemeStore((state) => state.darkMode);
 
   const router = createBrowserRouter(Routes);
+    const [user, setUser] = useState(null);
+
+
+  
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
@@ -21,6 +27,8 @@ function App() {
       <RouterProvider router={router} />
       <ToastContainer position="top-center"/>
     </ThemeProvider>
+
+    // <Mycard/>
   );
 }
 

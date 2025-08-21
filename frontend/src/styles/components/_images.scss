@@ -1,20 +1,96 @@
-
 @use "../abstracts/mixins" as *;
 
 .login_background_image {
-    // background-image($img-path, $width, $padding-inline, $padding-block, $height)
+    // background-image($img-path, width, padding-inline, padding-block, height)
+    // background-image($img-path, width,bgSize, padding-inline, padding-block, height)
 
-  @include background-image("./loginImage.png",50%,null,null,100vh);
+
+    @include background-image("./loginImage.png", 50%, null, null, 100vh);
 
 }
-.carousel-container{
-    @include background-image("./crouselbackImage.jpg",100%,2rem,2rem,fit-content);
+
+.carousel-container {
+    @include background-image("./crouselbackImage.jpg", 100%, 2rem, 2rem, fit-content);
 }
-.imageSliderBImage{
-    @include background-image("./imageSliderbackImage.png",100%,null,null,null);
+
+.imageSliderBImage {
+    @include background-image("./imageSliderbackImage.png", 100%, null, null, null);
     background-color: black;
 }
-.commentCrouselCont{
-    @include background-image("./commentBackImage.jpg",100%,null,1rem,null);
+
+.commentCrouselCont {
+    @include background-image("./commentBackImage.jpg", 100%, null, 1rem, 600px);
+    // background-color: wheat;
+
 }
 
+.top-bgImg {
+    @include background-image("./top-bg.jpg", 100%, null, null, 55vh);
+    margin-bottom: 4rem;
+    color: white;
+    background-position: center;
+}
+
+.Newsbg {
+    @include background-image("./newsbg.jpg", 100%, null, null, 55vh);
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-position: bottom;
+    color: white;
+}
+
+
+.News1 {
+    @include background-image("./news1.png", 350px, null, null, 12rem);
+    padding: 20px;
+}
+
+.News2 {
+    @include background-image("./news2.png", 350px, null, null, 12rem);
+    padding: 20px;
+}
+
+.News3 {
+    @include background-image("./news3.png", 350px, null, null, 12rem);
+    padding: 20px;
+
+}
+
+.News4 {
+    @include background-image("./news4.png", 350px, null, null, 12rem);
+    padding: 20px;
+
+}
+
+.News5 {
+    @include background-image("./news5.png", 350px, null, null, 12rem);
+    padding: 20px;
+
+}
+
+.News6 {
+    @include background-image("./news6.png", 350px, null, null, 12rem);
+    padding: 20px;
+
+}
+
+.podcastBg {
+    @include background-image("./podcastbg.jpg", 350px, null, null, 400px);
+    display: flex;
+    flex-direction: column;
+    padding-inline:1rem ;
+    color: white;
+}
+
+.ads1 {
+    @include background-image("./ads1bg.png", 350px, null, null, 400px);
+
+}
+
+// .ads2 {
+//     @include background-image("./ads2bg.png", 300px, null, null, 13rem);
+//     background-size: cover;
+//     // background-color: #fff;
+// }

@@ -8,7 +8,7 @@ export const uploadVideo = async (req, res) => {
 
     if (!file)
       return res.status(400).json({ message: "No video file provided" });
-    if (!title) return res.status(400).json({ message: "Title is required" });
+    if (!title || !description || !category) return res.status(400).json({ message: "all field  is required" });
 
     // Upload buffer to Cloudinary
     const fileName = `${req.user.id}_${Date.now()}`;
@@ -16,7 +16,7 @@ export const uploadVideo = async (req, res) => {
     const result = await uploadVideoBuffer(fileBuffer, fileName);
 
     // Cloudinary returns resource data
-    // For videos: result.secure_url (video url), result.public_id, result.eager (array) for generated thumbnail
+    // result.secure_url (video url), result.public_id, result.eager (array) for generated thumbnail
     const video_url = result.secure_url;
     const video_public_id = result.public_id;
     const thumbnail_url =
