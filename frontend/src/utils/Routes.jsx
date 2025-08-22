@@ -22,6 +22,7 @@ const Routes = [
         element: <Home />,
       },
 
+
       {
         path: "subscribe",
         element: <Subscribe />,
@@ -29,9 +30,11 @@ const Routes = [
       {
         path: "user-form",
         element: <UserForm />,
+        element: <UserForm />,
       },
       {
         path: "payment",
+        element: <Payment />,
         element: <Payment />,
       },
       {
@@ -40,6 +43,7 @@ const Routes = [
       },
       {
         path: "contact",
+        element: <ContactUs />,
         element: <ContactUs />,
       },
       {

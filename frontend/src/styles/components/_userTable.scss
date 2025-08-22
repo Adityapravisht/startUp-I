@@ -6,6 +6,7 @@
 /* Header */
 .header-section {
   margin-bottom: 20px;
+  color: #333;
 }
 
 .header-section h3 {
@@ -53,79 +54,3 @@
   font-size: 14px;
 }
 
-/* Table container */
-.gridjs-wrapper {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  overflow: hidden;
-  margin: 1rem 1rem;
-}
-
-.table-header {
-    padding-top: 1rem;
-}
-
-
-/* Move search bar to the right */
-.gridjs-search {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 10px;
-  padding-top: 0;
-}
-
-.gridjs-search input {
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-/* Header row */
-.gridjs-th {
-  background-color: #f0f0f0;
-  color: #333;
-  font-weight: 600;
-  text-align: center;
-//   padding: 10px;
-padding-top: 5px;
-}
-
-/* Table body rows */
-.gridjs-td {
-  background-color: white;
-  padding: 10px 12px;
-  border-bottom: 1px solid #eee;
-  color: black;
-  text-align: center;
-  margin-bottom: 10px;
-
-//   border-right: 1px solid #eee;
-
-}
-
-/* Row hover effect */
-.gridjs-tr:hover .gridjs-td {
-  background-color: #fafafa;
-}
-
-/* Pagination controls */
-.gridjs-pages {
-  margin-top: 12px;
-  display: flex;
-  justify-content: center;
-}
-
-.gridjs-page {
-  border-radius: 4px;
-  padding: 4px 8px;
-  margin: 0 3px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-}
-
-.gridjs-page.active {
-  background-color: #333;
-  color: #fff;
-  border-color: #333;
-}

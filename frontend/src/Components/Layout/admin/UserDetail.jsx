@@ -3,6 +3,7 @@ import { FaCube } from "react-icons/fa";
 import { GrNext } from "react-icons/gr";
 import MyImage from "../../atoms/MyImage";
 import MyButton from "../../atoms/MyButton";
+
 import { FaCheck } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
 import { FaPen } from "react-icons/fa";
@@ -58,6 +59,7 @@ const UserDetail = () => {
           <p>Admin</p>
         </div>
       </div>
+
 
       {/* details head */}
       <div className="detailsHead">
