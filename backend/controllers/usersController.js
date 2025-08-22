@@ -1,111 +1,108 @@
-import * as clientServices from "../services/clientServices.js";
+import * as usersService from "../services/usersServices.js";
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
 import passport from "passport";
 
 dotenv.config();
 
-// passport auth
-export const connectPassport = () => {
-  passport.use(
-    new GoogleStrategy(
-      {
-        clientID: "asd",
-        clientSecret: "asd",
-        callbackURL: "asd",
-      },
-      // this function run for login or register
-      async function (accessToken, refreshToken, done) {
-        // database comes here
-      }
-    )
-  );
-  passport.serializeUser((user, done) => {
-    done(null, user.id);
-  });
-  passport.deserializeUser(async(id,done)=>{
-    // const user =  await User.findById()
-    done(null,user);
-  })
-};
 
-export const register = async (req, res) => {
+// export const createUserDetails = async (req, res) => {
+//   try {
+//     const userData = req.body;
+//     const newUser = await usersService.createUserDetails(userData);
+//     res
+//       .status(201)
+//       .json({ message: "User details created successfully", newUser });
+//   } catch (error) {
+//     console.error("Error creating user details:", error);
+//     res
+//       .status(500)
+//       .json({ message: "Internal server error", error: error.message });
+//   }
+// };
+
+export const getUsers = async (req, res) => {
   try {
-    const { name, email, password } = req.body;
-    if (!name || !email || !password) {
-      return res.status(400).json("All fields are required");
-    }
-    if (password.length < 6) {
-      return res.json({ message: "password must contain more then 6 letter" });
-    }
-
-    const userRegistered = await clientServices.getClientByEmail(email);
-
-    if (userRegistered) {
-      return res.json({ message: "already registered use diffrent email" });
-    }
-
-    const newUser = await clientServices.createClient(name, email, password);
-
-    return res.json({ newUser, message: "user created sucessfully" });
+    const users = await usersService.getAllUserDetails();
+    res.status(200).json(users);
   } catch (error) {
-    return res.json(error);
+    console.error("Error fetching all user details:", error);
+    res
+      .status(500)
+      .json({ message: "Internal server error", error: error.message });
   }
 };
 
-export const login = async (req, res) => {
+// Get User Details by ID
+export const getUserById = async (req, res) => {
   try {
-    const { email, password } = req.body;
-
-    if (!email || !password) {
-      return res.status(400).json({ message: "All fields are required" });
+    const { id } = req.params;
+    if (!id) {
+      return res.json({ message: "id is missing" });
     }
-    if (password.length < 6) {
-      return res
-        .status(400)
-        .json({ message: "Password must be at least 6 characters" });
-    }
+    const user = await usersService.getUserDetailsById(id);
 
-    const user = await clientServices.authenticateUser(email, password);
     if (!user) {
-      return res.status(401).json({ message: "Invalid email or password" });
+      return res.status(404).json({ message: "User not found" });
     }
 
-    const payload = { id: user.id, email: user.email };
+    res.status(200).json(user);
+  } catch (error) {
+    console.error("Error fetching user details by id:", error);
+    res
+      .status(500)
+      .json({ message: "Internal server error", error: error.message });
+  }
+};
 
-    jwt.sign(payload, process.env.JWT_SECRET, {}, (err, token) => {
-      if (err) throw err;
-      // const { password, ...userWithoutPassword } = user._doc;
-      return res
-        .cookie("token", token, {
-          httpOnly: true,
-          secure: false,
-          sameSite: "lax",
-          path: "/",
-        })
-        .json({ message: "user logged in" });
+///////////////////////
+
+// repository/userRepository.js
+export const insertUserAndSubscription = async (req, res) => {
+  try {
+    const {
+      planType,
+      title,
+      fname,
+      lname,
+      email,
+      countryCode,
+      areaCode,
+      mobileNo,
+      address1,
+      address2,
+      town,
+      city,
+      postCode,
+      hashedPassword,
+    } = req.body;
+
+    const result = await usersService.insertUserAndSubsData({
+      planType,
+      title,
+      fname,
+      lname,
+      email,
+      countryCode,
+      areaCode,
+      mobileNo,
+      address1,
+      address2,
+      town,
+      city,
+      postCode,
+      hashedPassword,
+    });
+
+    return res.status(201).json({
+      message: "User and subscription created successfully",
+      result,
     });
   } catch (error) {
-    console.error("Login error:", error);
-    res.status(500).json({ message: "Internal server error" });
-  }
-};
-
-export const getClients = async (req, res) => {
-  try {
-    const client = await clientServices.getALlClients();
-    res.status(200).json(client);
-  } catch (error) {
-    res.status(500).json({ message: "internal server error", error });
-  }
-};
-
-export const createClient = async (req, res) => {
-  try {
-    const { name, email, password } = req.body;
-    const newClient = await clientServices.createClient(name, email, password);
-    res.status(201).json(newClient);
-  } catch (error) {
-    res.status(400).json({ message: "client not craeted", error });
+    console.error("Error inserting user and subscription:", error);
+    return res.status(500).json({
+      message: "Internal server error",
+      error: error.message,
+    });
   }
 };

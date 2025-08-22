@@ -1,23 +1,17 @@
 import express from "express";
 import {
-  createClient,
-  getClients,
-  login,
-  register,
+  getUserById,
+  getUsers,
+  insertUserAndSubscription,
+  
 } from "../controllers/usersController.js";
-import passport from "passport";
+
 
 const router = express.Router();
 
-router.route("/getClient").get(getClients);
-router.route("/AddClient").post(createClient);
-router.route("/login").post(login);
-router.route("/signup").post(register);
-router.get(
-  "/googleAuth",
-  passport.authenticate("google", {
-    scope: ["profile"],
-  })
-);
+router.route("/getUsers").get(getUsers);
 
+
+router.route("/createDetail").post(insertUserAndSubscription);
+router.route("/getById/:id").get(getUserById);
 export default router;
