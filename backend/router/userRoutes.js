@@ -9,9 +9,9 @@ import {
 
 const router = express.Router();
 
-router.route("/getUsers").get(getUsers);
-router.route("/createDetail").post(insertUserAndSubscription);
-router.route("/getById/:id").get(getUserById);
+router.route("/users").get(getUsers);
+router.route("/user-details").post(insertUserAndSubscription);
+router.route("/user/:id").get(getUserById);
 
 
 export default router;

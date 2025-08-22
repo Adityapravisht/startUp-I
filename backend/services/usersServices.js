@@ -55,7 +55,7 @@ export const getAllUserDetails = async () => {
   return rows;
 };
 
-// Get Single User Details by ID
+
 export const getUserDetailsById = async (id) => {
   const { rows } = await query(
     "SELECT u.*, s.* FROM users u LEFT JOIN subscription s ON u.user_id = s.user_id WHERE u.user_id = $1 ORDER BY u.user_id",
@@ -63,6 +63,7 @@ export const getUserDetailsById = async (id) => {
   );
   return rows[0];
 };
+
 
 
 

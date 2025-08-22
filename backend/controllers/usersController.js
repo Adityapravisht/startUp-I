@@ -57,7 +57,6 @@ export const getUserById = async (req, res) => {
 
 ///////////////////////
 
-// repository/userRepository.js
 export const insertUserAndSubscription = async (req, res) => {
   try {
     const {
@@ -94,6 +93,7 @@ export const insertUserAndSubscription = async (req, res) => {
       hashedPassword,
     });
 
+    console.log("userhj", result);
     return res.status(201).json({
       message: "User and subscription created successfully",
       result,
