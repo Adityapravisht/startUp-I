@@ -9,7 +9,7 @@ import { ContactUs } from "../pages/ContactUs";
 import { UserForm } from "../pages/UserForm";
 import { Payment } from "../pages/Payment";
 import { UsersTable } from "../pages/UsersTable";
-import Signup from "../pages/SignUp";
+import SignUpPage from "../pages/SignUpPage";
 
 // import PhoneSignup from "../Pages/PhoneSignup";
 const Routes = [
@@ -54,7 +54,7 @@ const Routes = [
   },
   {
     path: "signup",
-    element: <Signup />,
+    element: <SignUpPage />,
   },
   {
     path: "about",

@@ -9,7 +9,7 @@ import MyInput from "../components/atoms/MyInput";
 import MyButton from "../components/Atoms/MyButton";
 
 
-const SignUp = () => {
+const SignUpPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [SignupError, setLoginError] = useState("");
   const navigate = useNavigate();
@@ -185,4 +185,5 @@ const SignUp = () => {
 
   };
 
-export default SignUp;
+export default  SignUpPage
+;

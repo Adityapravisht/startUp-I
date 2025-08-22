@@ -228,7 +228,7 @@ const UserDetail = () => {
           </div>
 
           {addressdata.map((data, idx) => (
-            <div>
+            <div key={idx}>
               <h1 className="roboto-bold" style={{ paddingBlock: "1rem" }}>
                 {data.type}
               </h1>
@@ -260,10 +260,10 @@ const UserDetail = () => {
           {purchData?.map((data, idx) => (
             <div
               key={idx}
-              style={{ padding: "10px", borderBottom: "1px solid gray" }}
-              className="roboto-medium"
+              style={{ padding: "10px", borderBottom: "1px solid gray",fontSize:'17px' }}
+              className="roboto-regular "
             >
-              <p>{data?.date}</p>
+              <p style={{fontWeight:'bold'}}>{data?.date}</p>
               <p
                 style={{
                   display: "flex",

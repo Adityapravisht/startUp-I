@@ -72,18 +72,21 @@
     min-width: 60%;
     height: fit-content;
 
-    @media(max-width:1080px) {
-        min-width: 90%;
+    @media(max-width:1109px) {
+        min-width: 100%;
     }
+
 }
 
 .card2 {
     font-size: 1rem;
     color: #4F4F4F;
     padding: 1rem;
+    width: 30%;
 
-    @media(max-width:1080px) {
-        min-width: 90%;
+    @media(max-width:1109px) {
+        min-width: 100%;
+        // background-color: black;
     }
 }
 
@@ -91,16 +94,22 @@
     font-size: 1rem;
     color: #4F4F4F;
     padding: 1rem;
-    width: 60%;
+    width: 100%;
 
-    @media(min-width:1080px) {
-        position: relative;
-        bottom: 95px;
-    }
+    // @media(min-width:110px) {
+    //     position: relative;
+    //     bottom: 95px;
+    //     // background-color: black;
+    // }
 
-    @media(max-width:1080px) {
-        min-width: 90%;
-    }
+    // @media(min-width:1109px){
+    //      position: relative;
+    //     bottom: 95px;
+    // }
+
+    // @media(min-width:1109px) {
+    //     min-width: 100%;
+    // }
 }
 
 .dateBadge {

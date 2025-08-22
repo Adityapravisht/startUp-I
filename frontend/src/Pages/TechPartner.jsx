@@ -5,7 +5,6 @@ export const TechPartner = () => {
   return (
     <div>
       {/* <UsersTable/> */}
-      
       <div className="subsDashboard">
       <Menu />
       <div className="contentArea" style={{color:'gray'}}>
