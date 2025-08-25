@@ -64,9 +64,6 @@ export const getUserDetailsById = async (id) => {
   return rows[0];
 };
 
-
-
-
 export const insertUserAndSubsData = async (userData) => {
   const {
     planType,

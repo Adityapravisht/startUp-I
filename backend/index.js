@@ -2,7 +2,6 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import userRoutes from "./router/userRoutes.js";
-// import videoRoutes from "./router/videoRoutes.js";
 import cookieParser from "cookie-parser";
 
 
@@ -15,9 +14,9 @@ const corsOptions = {
   methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
 };
+
+
 app.use(cookieParser());
-
-
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

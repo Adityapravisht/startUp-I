@@ -5,7 +5,6 @@ import passport from "passport";
 
 dotenv.config();
 
-
 // export const createUserDetails = async (req, res) => {
 //   try {
 //     const userData = req.body;
