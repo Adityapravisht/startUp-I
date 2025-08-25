@@ -46,7 +46,6 @@ import bcrypt from "bcryptjs";
 //   return result.rows[0];
 // };
 
-
 // Get All User Details
 export const getAllUserDetails = async () => {
   const { rows } = await query(
@@ -121,4 +120,3 @@ export const insertUserAndSubsData = async (userData) => {
     subscription: subscriptionResult.rows[0],
   };
 };
-
