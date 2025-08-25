@@ -3,7 +3,7 @@ import { query } from "../db.js";
 // Create category
 export const insertCategoryData = async ({ image, name, language, skuId }) => {
   const result = await query(
-    `INSERT INTO category (image, name, language, "skuId") 
+    `INSERT INTO category (image, category_name, lang, "sku_id") 
      VALUES ($1, $2, $3, $4) 
      RETURNING *`,
     [image, name, language, skuId]
@@ -19,7 +19,7 @@ export const getAllCategories = async () => {
 
 // Get category by id
 export const getCategoryById = async (id) => {
-  const result = await query(`SELECT * FROM category WHERE id = $1`, [id]);
+  const result = await query(`SELECT * FROM category WHERE category_id = $1`, [id]);
   return result.rows[0];
 };
 
@@ -27,8 +27,8 @@ export const getCategoryById = async (id) => {
 export const updateCategory = async (id, { image, name, language, skuId }) => {
   const result = await query(
     `UPDATE category 
-     SET image = $1, name = $2, language = $3, "skuId" = $4
-     WHERE id = $5
+     SET image = $1, category_name = $2, lang = $3, sku_id = $4
+     WHERE category_id = $5
      RETURNING *`,
     [image, name, language, skuId, id]
   );
@@ -37,7 +37,7 @@ export const updateCategory = async (id, { image, name, language, skuId }) => {
 
 // Delete category
 export const deleteCategory = async (id) => {
-  const result = await query(`DELETE FROM category WHERE id = $1 RETURNING *`, [
+  const result = await query(`DELETE FROM category WHERE category_id = $1 RETURNING *`, [
     id,
   ]);
   return result.rows[0];
