@@ -1,68 +1,7 @@
 import { query } from "../db.js";
 import bcrypt from "bcryptjs";
 
-// export const createUserDetails = async (userData) => {
-//   const {
-//     planType,
-//     title,
-//     fname,
-//     lname,
-//     email,
-//     countryCode,
-//     areaCode,
-//     mobileNo,
-//     address1,
-//     address2,
-//     town,
-//     city,
-//     postCode,
-//   } = userData;
-
-//   const result = await query(
-//     `INSERT INTO users
-//       (planType, title, fname, lname, email, countryCode, areaCode, mobileNo, address1, address2, town, city, postCode, password)
-//      VALUES
-//       ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14)
-//      RETURNING *`,
-//     [
-//       planType,
-//       // plan?.name ?? plan, // plan can be object or string
-//       title,
-//       fname,
-//       lname,
-//       email,
-//       countryCode,
-//       areaCode,
-//       mobileNo,
-//       address1,
-//       address2,
-//       town,
-//       city,
-//       postCode,
-//       hashedPassword,
-//     ]
-//   );
-
-//   return result.rows[0];
-// };
-
-// Get All User Details
-export const getAllUserDetails = async () => {
-  const { rows } = await query(
-    "SELECT u.*,s.* from users u LEFT JOIN subscription s on u.user_id = s.user_id ORDER BY u.user_id"
-  );
-  return rows;
-};
-
-
-export const getUserDetailsById = async (id) => {
-  const { rows } = await query(
-    "SELECT u.*, s.* FROM users u LEFT JOIN subscription s ON u.user_id = s.user_id WHERE u.user_id = $1 ORDER BY u.user_id",
-    [id]
-  );
-  return rows[0];
-};
-
+// Create User deatils
 export const insertUserAndSubsData = async (userData) => {
   const {
     planType,
@@ -119,4 +58,21 @@ export const insertUserAndSubsData = async (userData) => {
     user: newUser,
     subscription: subscriptionResult.rows[0],
   };
+};
+
+// Get all user details
+export const getAllUserDetails = async () => {
+  const { rows } = await query(
+    "SELECT u.*,s.* from users u LEFT JOIN subscription s on u.user_id = s.user_id ORDER BY u.user_id"
+  );
+  return rows;
+};
+
+// Geta a user by id
+export const getUserDetailsById = async (id) => {
+  const { rows } = await query(
+    "SELECT u.*, s.* FROM users u LEFT JOIN subscription s ON u.user_id = s.user_id WHERE u.user_id = $1 ORDER BY u.user_id",
+    [id]
+  );
+  return rows[0];
 };
