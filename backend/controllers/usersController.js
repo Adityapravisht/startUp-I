@@ -5,21 +5,6 @@ import passport from "passport";
 
 dotenv.config();
 
-// export const createUserDetails = async (req, res) => {
-//   try {
-//     const userData = req.body;
-//     const newUser = await usersService.createUserDetails(userData);
-//     res
-//       .status(201)
-//       .json({ message: "User details created successfully", newUser });
-//   } catch (error) {
-//     console.error("Error creating user details:", error);
-//     res
-//       .status(500)
-//       .json({ message: "Internal server error", error: error.message });
-//   }
-// };
-
 export const getUsers = async (req, res) => {
   try {
     const users = await usersService.getAllUserDetails();
